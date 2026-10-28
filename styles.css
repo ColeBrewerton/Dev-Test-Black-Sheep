@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Quicksand", Arial, sans-serif;
+  background: #efefee;
+}
+
+.hero {
+  position: relative;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  padding: 40px 8vw;
+  background:
+    linear-gradient(90deg, rgba(16, 15, 15, 0.78) 0%, rgba(16, 15, 15, 0.52) 28%, rgba(16, 15, 15, 0.18) 58%, rgba(16, 15, 15, 0.08) 100%),
+    url("assets/main-banner.png") center/cover no-repeat;
+  overflow: hidden;
+}
+
+.banner-wave {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 540px;
+  margin-left: 7vw;
+  color: #ffffff;
+  transform: translateY(-30px);
+}
+
+.hero h1 {
+  margin: 0 0 18px;
+  font-size: clamp(2.8rem, 4vw, 4.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.hero p {
+  margin: 0 0 24px;
+  max-width: 430px;
+  font-size: 1.06rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 6px;
+  background: #f08a3e;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: 500px;
+    padding: 32px 24px;
+  }
+
+  .hero-content {
+    max-width: 280px;
+    margin-left: 0;
+    transform: translateY(-10px);
+  }
+
+  .hero h1 {
+    white-space: normal;
+    font-size: clamp(2.1rem, 8vw, 3rem);
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+    max-width: 260px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+  }
+}
