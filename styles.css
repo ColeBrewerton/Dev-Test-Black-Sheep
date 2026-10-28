@@ -5,7 +5,12 @@
 body {
   margin: 0;
   font-family: "Quicksand", Arial, sans-serif;
-  background: #efefee;
+  background: #ffffff;
+  color: #2f2c2b;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .hero {
@@ -67,6 +72,104 @@ body {
   font-size: 0.88rem;
 }
 
+.services {
+  padding: 20px 0 60px;
+}
+
+.services h2 {
+  margin: 0;
+  text-align: center;
+  font-size: clamp(2rem, 2.5vw, 3rem);
+  letter-spacing: -0.05em;
+}
+
+.services-intro {
+  max-width: 760px;
+  margin: 14px auto 0;
+  text-align: center;
+  color: #6d6a67;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 0 20px;
+}
+
+.cards {
+  width: min(1100px, calc(100% - 40px));
+  margin: 34px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  background: #fffdfb;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(34, 24, 18, 0.18);
+  height: 100%;
+}
+
+.card-image {
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+
+.walking {
+  background-image: url("assets/card-image-walking.png");
+}
+
+.boarding {
+  background-image: url("assets/card-image-boarding.png");
+}
+
+.sitting {
+  background-image: url("assets/card-image-sitting.png");
+}
+
+.card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 18px 18px 20px;
+}
+
+.card-body h3 {
+  margin: 0;
+  font-size: 1.45rem;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+}
+
+.card-body p {
+  margin: 10px 0 0;
+  color: #5f5d5b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: auto;
+  padding-top: 18px;
+  color: #ee8f46;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: 1fr;
+    width: min(560px, calc(100% - 30px));
+  }
+}
+
 @media (max-width: 700px) {
   .hero {
     min-height: 500px;
@@ -91,5 +194,13 @@ body {
 
   .btn {
     padding: 12px 20px;
+  }
+
+  .services {
+    padding-top: 12px;
+  }
+
+  .card-image {
+    height: 220px;
   }
 }
