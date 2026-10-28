@@ -200,32 +200,54 @@ body {
 
 @media (max-width: 700px) {
   .hero {
-    min-height: 500px;
-    padding: 32px 24px;
+    min-height: 100vh;
+    padding: 18px;
+    padding-bottom: 100px;  
+    background:
+      linear-gradient(180deg, rgba(16, 15, 15, 0.08) 0%, rgba(16, 15, 15, 0.18) 35%, rgba(16, 15, 15, 0.72) 100%),
+      url("assets/main-banner.png") 70% 52% / cover no-repeat;
   }
 
   .hero-content {
-    max-width: 280px;
-    margin-left: 0;
-    transform: translateY(-10px);
+    max-width: 90%;
+    margin-left: 8px;
+    margin-top: auto;
+    transform: none;
+    align-self: flex-end;
+    padding-bottom: 8px;
   }
 
   .hero h1 {
     white-space: normal;
-    font-size: clamp(2.1rem, 8vw, 3rem);
+    font-size: clamp(4.4rem, 16vw, 7rem);
+    line-height: 0.8;
+    letter-spacing: -0.06em;
+    margin-bottom: 16px;
   }
 
   .hero p {
-    font-size: 0.9rem;
-    max-width: 260px;
+    font-size: 1.35rem;
+    max-width: 96%;
+    line-height: 1.12;
+    margin-bottom: 18px;
   }
 
   .btn {
-    padding: 12px 20px;
+    padding: 18px 28px;
+    font-size: 1.1rem;
   }
 
   .services {
     padding-top: 12px;
+  }
+
+  .services h2 {
+    font-size: 2.8rem;
+  }
+
+  .services-intro {
+    font-size: 1.2rem;
+    line-height: 1.35;
   }
 
   .card-image {
@@ -233,10 +255,15 @@ body {
   }
 
   .card-body h3 {
-    font-size: 1.55rem;
+    font-size: 2rem;
   }
 
   .card-body p {
-    font-size: 0.92rem;
+    font-size: 1.08rem;
+    line-height: 1.45;
+  }
+
+  .card-link {
+    font-size: 1.1rem;
   }
 }
