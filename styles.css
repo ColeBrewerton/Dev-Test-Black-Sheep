@@ -163,10 +163,38 @@ body {
   font-size: 1rem;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .cards {
     grid-template-columns: 1fr;
-    width: min(560px, calc(100% - 30px));
+    width: min(720px, calc(100% - 32px));
+    gap: 20px;
+  }
+
+  .service-card {
+    display: flex;
+    flex-direction: row;
+    min-height: 0;
+  }
+
+  .card-image {
+    width: 42%;
+    min-height: 260px;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  .card-body {
+    width: 58%;
+    padding: 18px 20px 22px;
+    justify-content: center;
+  }
+
+  .card-body h3 {
+    font-size: 1.75rem;
+  }
+
+  .card-body p {
+    font-size: 1rem;
   }
 }
 
@@ -201,6 +229,14 @@ body {
   }
 
   .card-image {
-    height: 220px;
+    height: 240px;
+  }
+
+  .card-body h3 {
+    font-size: 1.55rem;
+  }
+
+  .card-body p {
+    font-size: 0.92rem;
   }
 }
